@@ -1,20 +1,15 @@
-using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
-using System.Collections.Generic;
-using System.Collections;
 using System;
+using UnityEngine;
 
 public class PopUp : MonoBehaviour
 {
-    public GameObject popUpBox;
-    public Animator animator;
-    public TMP_Text popUpText;
-
-    public void PopUps(String text)
-    {
-        popUpBox.SetActive(true);
-        animator.SetTrigger("pop");
-        popUpText.text = text;
+    public GameObject pict;
+    public void Trigger(){
+        if(pict.activeInHierarchy == true){
+            pict.SetActive(false);
     }
+    else{
+        Console.WriteLine("PopUp is already inactive.");
+    }
+}
 }
